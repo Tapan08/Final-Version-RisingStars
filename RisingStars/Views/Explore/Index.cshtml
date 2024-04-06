@@ -1,0 +1,46 @@
+﻿@using RisingStarsData.Entities
+@model List<Project>
+
+@{
+    ViewBag.Title = "Explore";
+}
+
+@*
+    using tailwind css
+*@
+
+
+<div class="container mx-auto min-h-screen pt-2">
+    <div class="row prose">
+        <div class="col-md-12">
+            <h1 class="mb-0">Explore</h1>
+            <p class="mt-0">Explore the projects that are currently on the platform.</p>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        @foreach (var project in Model)
+        {
+
+            <div class="card w-96 bg-base-100 shadow-xl hover:shadow-2xl transition-transform transform hover:scale-105">
+                <div class="card-body">
+                    <h2 class="card-title">@project.Title</h2>
+                    <p>
+                        @if (project.Description.Length > 100)
+                        {
+                            @project.Description.Substring(0, 100)
+                            <text>...</text>
+                        }
+                        else
+                        {
+                            @project.Description
+                        }
+                        </p>
+                    <div class="card-actions justify-end">
+                        <a href="@Url.Action("Details", "Explore", new { id = project.ProjectId })" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

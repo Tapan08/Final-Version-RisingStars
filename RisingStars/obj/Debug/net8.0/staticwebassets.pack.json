@@ -1,0 +1,101 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RisingStars.bundle.scp.css",
+      "PackagePath": "staticwebassets\\RisingStars.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\images\\RisingStarLogo.png",
+      "PackagePath": "staticwebassets\\images\\RisingStarLogo.png"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\images\\login-background-image.jpg",
+      "PackagePath": "staticwebassets\\images\\login-background-image.jpg"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\017649a9-dbe0-495f-8a28-5dc2b70e0f8a_a2fe21da9ce7d1698f5b48cdb506c853.jpg",
+      "PackagePath": "staticwebassets\\uploads\\017649a9-dbe0-495f-8a28-5dc2b70e0f8a_a2fe21da9ce7d1698f5b48cdb506c853.jpg"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\1364c618-5ae2-43f7-a4fa-380291b55dc8_329763.jpg",
+      "PackagePath": "staticwebassets\\uploads\\1364c618-5ae2-43f7-a4fa-380291b55dc8_329763.jpg"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\17cbb523-775f-4824-8e9a-60928cbeb3d9_329763.jpg",
+      "PackagePath": "staticwebassets\\uploads\\17cbb523-775f-4824-8e9a-60928cbeb3d9_329763.jpg"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\286f7dd6-d2ff-4f7d-adcd-b95eb255bff8_DSCN4000.JPG",
+      "PackagePath": "staticwebassets\\uploads\\286f7dd6-d2ff-4f7d-adcd-b95eb255bff8_DSCN4000.JPG"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\5019baeb-610b-493e-8551-bd844f75e536_329763.jpg",
+      "PackagePath": "staticwebassets\\uploads\\5019baeb-610b-493e-8551-bd844f75e536_329763.jpg"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\59ba85e1-a456-44f1-b102-13f32008d23b_Login Page Wireframe Mobile UI Prototype.pdf",
+      "PackagePath": "staticwebassets\\uploads\\59ba85e1-a456-44f1-b102-13f32008d23b_Login Page Wireframe Mobile UI Prototype.pdf"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\62061a04-ee93-43be-ab5f-94cffdb321ca_329763.jpg",
+      "PackagePath": "staticwebassets\\uploads\\62061a04-ee93-43be-ab5f-94cffdb321ca_329763.jpg"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\66e0bb9b-2d69-4aa7-b5e6-0c4ac3b6166f_video1261046666.mp4",
+      "PackagePath": "staticwebassets\\uploads\\66e0bb9b-2d69-4aa7-b5e6-0c4ac3b6166f_video1261046666.mp4"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\6c4ca275-3213-4223-8052-a337d2a9fbf5_Document (1).docx",
+      "PackagePath": "staticwebassets\\uploads\\6c4ca275-3213-4223-8052-a337d2a9fbf5_Document (1).docx"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\7505a30c-5243-4a37-9e97-f4d0725b97de_DSCN4000.JPG",
+      "PackagePath": "staticwebassets\\uploads\\7505a30c-5243-4a37-9e97-f4d0725b97de_DSCN4000.JPG"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\785728a1-9505-4e87-b171-938b5e1d6ef7_Login Page Wireframe Mobile UI Prototype.pdf",
+      "PackagePath": "staticwebassets\\uploads\\785728a1-9505-4e87-b171-938b5e1d6ef7_Login Page Wireframe Mobile UI Prototype.pdf"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\bd11765d-3721-4b4d-adc8-9523b405155a_a2fe21da9ce7d1698f5b48cdb506c853.jpg",
+      "PackagePath": "staticwebassets\\uploads\\bd11765d-3721-4b4d-adc8-9523b405155a_a2fe21da9ce7d1698f5b48cdb506c853.jpg"
+    },
+    {
+      "Id": "C:\\RisingStars Final\\RisingStars\\RisingStars\\wwwroot\\uploads\\cb3dac80-7045-4059-b7ec-c2ff2076e11c_Login Page Wireframe Mobile UI Prototype.pdf",
+      "PackagePath": "staticwebassets\\uploads\\cb3dac80-7045-4059-b7ec-c2ff2076e11c_Login Page Wireframe Mobile UI Prototype.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RisingStars.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.RisingStars.props",
+      "PackagePath": "build\\RisingStars.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.RisingStars.props",
+      "PackagePath": "buildMultiTargeting\\RisingStars.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.RisingStars.props",
+      "PackagePath": "buildTransitive\\RisingStars.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

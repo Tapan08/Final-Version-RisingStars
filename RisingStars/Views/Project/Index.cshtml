@@ -1,0 +1,54 @@
+﻿@model IEnumerable<RisingStarsData.Entities.Project>
+
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<div class="container mx-auto min-h-screen px-5">
+<div class="flex justify-between prose max-w-none">
+    <div class="flex-1">
+        <h1 class="display-4 mb-0">Projects</h1>
+        <p class="text-muted">Browse through the inspiring and impactful projects that our students have worked on.</p>
+    </div>
+    <a asp-action="CreateProject" class="btn btn-primary">Create New Project</a>
+</div>
+
+<div class="mt-4">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th class="col">Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var project in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => project.Title)</td>
+                    <td class="max-w-sm">@Html.DisplayFor(modelItem => project.Description)</td>
+                    <td>@Html.DisplayFor(modelItem => project.StartDate)</td>
+                    <td>@Html.DisplayFor(modelItem => project.EndDate)</td>
+                    <td class="d-flex justify-content-end gap-2">
+                        <a asp-action="Details" class="btn btn-outline-primary" asp-route-id="@project.ProjectId">
+                            <i class="fa fas fa-eye"></i>
+                        </a>
+                        <a asp-action="Edit" class="btn btn-outline-secondary" asp-route-id="@project.ProjectId">
+                            <i class="fa fas fa-edit"></i>
+                        </a>
+                        <form asp-action="Delete" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@project.ProjectId" />
+                            <button type="submit" class="btn btn-error">
+                                <i class="fa fas fa-trash"></i>
+                            </button>
+                            </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+</div>

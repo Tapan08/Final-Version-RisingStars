@@ -1,0 +1,113 @@
+﻿@model RisingStars.Models.ExploreViewModel
+
+
+<div class="container mx-auto min-h-screen prose">
+
+    <h1 class="mb-0">@Model.Project.Title</h1>
+    <p class="mt-0">@Model.Project.Description</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+        <div class="stats bg-primary text-primary-content shadow">
+
+            <div class="stat">
+                <div class="stat-title text-primary-content">Team Size</div>
+                <div class="stat-value">@Model.Project.Members.Count</div>
+            </div>
+        </div>
+
+        <div class="stats bg-secondary text-secondary-content shadow">
+
+            <div class="stat text-secondary-content">
+                <div class="stat-title text-secondary-content">Start Date</div>
+                <div class="stat-value">@Model.Project.StartDate.ToShortDateString()</div>
+            </div>
+        </div>
+
+        <div class="stats bg-secondary text-accent-content shadow">
+
+            <div class="stat text-accent-content">
+                <div class="stat-title text-accent-content">End Date</div>
+                <div class="stat-value text-accent-content">@Model.Project.EndDate.ToShortDateString()</div>
+
+            </div>
+        </div>
+
+        <div class="stats bg-accent text-accent-content shadow">
+
+            <div class="stat text-accent-content">
+                <div class="stat-title text-accent-content">Mentor</div>
+                <div class="stat-value text-accent-content">@Model.Project.Mentor.LastName, @Model.Project.Mentor.FirstName</div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+    <h2>Members</h2>
+    <ul>
+        @foreach (var member in Model.Project.Members)
+        {
+            <li>@member.LastName, @member.FirstName</li>
+        }
+    </ul>
+    <hr />
+    <h2>Documents</h2>
+
+    @if (Model.Project.Documents.Count == 0)
+    {
+        <p>No documents available</p>
+    }
+
+    <ul>
+        @foreach (var document in Model.Project.Documents)
+        {
+            <li>
+               <a href="@Url.Action("Download", "Explore", new { id = document.DocumentId })">@document.FileName</a>
+            </li>
+        }
+    </ul>
+
+    <h2>Comments</h2>
+    <form method="post" asp-action="AddComment" asp-controller="Explore">
+        <input type="hidden" asp-for="@Model.Id" />
+        <div class="form-control mb-2">
+            <label class="label">
+                <span class="label-text">Comment</span>
+            </label>
+            <textarea asp-for="@Model.Comment"
+                      class="textarea input input-bordered min-h-28" placeholder="Enter your comment here"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+        @for (int i = 0; i < Model.Project.Comments.Count; i++)
+        {
+            <li>
+                <div class="timeline-middle">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                </div>
+                @if (i % 2 == 0)
+                {
+                    <div class="timeline-start md:text-end mb-10">
+                        <time class="font-mono italic">@Model.Project.Comments[i].CreatedAt.ToShortDateString()</time>
+                        <div class="text-lg font-black">@Model.Project.Comments[i].Student.LastName, @Model.Project.Comments[i].Student.FirstName</div>
+                        @Model.Project.Comments[i].Content
+                    </div>
+                }
+                else
+                {
+                    <div class="timeline-end mb-10">
+                        <time class="font-mono italic">@Model.Project.Comments[i].CreatedAt.ToShortDateString()</time>
+                        <div class="text-lg font-black">@Model.Project.Comments[i].Student.LastName, @Model.Project.Comments[i].Student.FirstName</div>
+                        @Model.Project.Comments[i].Content
+                    </div>
+                }
+                <hr />
+            </li>
+        }
+
+
+
+
+</div>

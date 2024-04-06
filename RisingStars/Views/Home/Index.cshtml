@@ -1,0 +1,89 @@
+﻿@model HomeViewModel
+
+<div class="container mx-auto">
+
+    <div class="hero rounded-2xl bg-base-200">
+        <div class="hero-content text-center">
+            <div class="max-w-xl">
+                <h1 class="text-5xl font-bold">Hello @Model.Student.FullName✌️</h1>
+                <p class="py-6">
+                    You logged in as a <span class="font-bold">@Model.Student.Major</span> student with email <span class="font-bold">@Model.Student.Email</span>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex gap-2">
+        <div class="card card-body bg-base-200 my-5 flex-none prose">
+
+                <h1>Announcements</h1>
+            <ul class="timeline timeline-snap-icon timeline-vertical">
+
+                @for (int i = 0; i < Model.Announcements.Count; i++)
+                {
+                    <li>
+                        <div class="timeline-middle">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+                        </div>
+
+                        @if (i % 2 == 0)
+                        {
+                            <div class="timeline-start md:text-end mb-10">
+                                <time class="font-mono italic">@Model.Announcements[i].PostDate.ToString("dd MMM yyyy")</time>
+                                <div class="text-lg font-black">@Model.Announcements[i].Title</div>
+                                @Model.Announcements[i].Content
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="timeline-end md:text-start mb-10">
+                                <time class="font-mono italic">@Model.Announcements[i].PostDate.ToString("dd MMM yyyy")</time>
+                                <div class="text-lg font-black">@Model.Announcements[i].Title</div>
+                                @Model.Announcements[i].Content
+                            </div>
+                        }
+
+                        <hr />
+                    </li>
+                }
+
+            </ul>
+        </div>
+
+        <div class="card card-body bg-base-200 my-5 flex-auto">
+            <!-- Projects Section -->
+            <div class="col-12">
+                <div class="card border-0">
+                    <div class="flex justify-between prose max-w-none">
+                        <h1 class="flex-1">
+                            My Projects
+                        </h1>
+                        <div>
+                            <a href="@Url.Action("Index", "Project")" class="btn btn-primary float-end">View All</a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @if (Model.MyProjects.Any())
+                        {
+                            foreach (var project in Model.MyProjects)
+                            {
+                                <a asp-controller="Project" asp-action="Details" asp-route-id="@project.ProjectId">
+                                <div class="bg-base-100 rounded-2xl card-body mb-3 prose max-w-none rounded hover:shadow-lg transition duration-300 ease-in-out">
+                                    <h2 class="mb-0 mt-0">@project.Title</h2>
+                                    <p class="mb-0 mt-0">@project.Description</p>
+                                    <p class="mb-0 mt-0"><small class="text-muted">Start Date: @project.StartDate.ToString("dd MMM yyyy") - End Date: @project.EndDate.ToString("dd MMM yyyy")</small></p>
+                                </div>
+                                </a>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-muted text-center mb-0">You have not been assigned any projects yet.</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
